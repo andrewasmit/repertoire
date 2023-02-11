@@ -1,5 +1,5 @@
-class Ensemble < ActiveRecord::Base
+class Concert < ActiveRecord::Base
     has_many :performances
     has_many :pieces, through: :performances
-    has_many :concerts
+    belongs_to :ensemble
 end

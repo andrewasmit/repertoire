@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_11_104537) do
+ActiveRecord::Schema.define(version: 2023_02_11_111026) do
+
+  create_table "concerts", force: :cascade do |t|
+    t.string "concert_description"
+    t.integer "ensemble_id"
+  end
 
   create_table "ensembles", force: :cascade do |t|
     t.string "name"
