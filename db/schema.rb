@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_12_030615) do
+ActiveRecord::Schema.define(version: 2023_02_12_034119) do
 
   create_table "concerts", force: :cascade do |t|
     t.string "concert_description"
-    t.datetime "date"
+    t.integer "year"
   end
 
   create_table "ensembles", force: :cascade do |t|
