@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_11_111026) do
+ActiveRecord::Schema.define(version: 2023_02_12_030615) do
 
   create_table "concerts", force: :cascade do |t|
     t.string "concert_description"
-    t.integer "ensemble_id"
+    t.datetime "date"
   end
 
   create_table "ensembles", force: :cascade do |t|
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(version: 2023_02_11_111026) do
   end
 
   create_table "performances", force: :cascade do |t|
-    t.datetime "date_of_performance"
     t.integer "piece_id"
+    t.integer "ensemble_id"
+    t.integer "concert_id"
   end
 
   create_table "pieces", force: :cascade do |t|
