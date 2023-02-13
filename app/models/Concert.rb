@@ -23,6 +23,6 @@ class Concert < ActiveRecord::Base
         end
         @arr.tally
     end
-    
+
 # end of Class 
 end
