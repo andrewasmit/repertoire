@@ -1,14 +1,21 @@
 puts "🌱 Seeding data..."
 
+# Clearing all data before seeding
+Piece.destroy_all
+Ensemble.destroy_all
+Note.destroy_all
+Performance.destroy_all
+Concert.destroy_all
+
 # Seeding pieces
-Piece.create(title: "The Gilded Cage", composer: "Susan Powell", number_of_players: 4, genre: "drums", difficulty: 3.5)
+Piece.create(title: "The Gilded Cage", composer: "Susan Powell", number_of_players: 4, genre: "drums", difficulty: 3)
 Piece.create(title: "Under Attack!", composer: "Matt Moore", number_of_players: 4, genre: "drums", difficulty: 4)
 Piece.create(title: "Stormbreak", composer: "Jim Casella", number_of_players: 8, genre: "mixed", difficulty: 3)
-Piece.create(title: "The Final Boss", composer: "Andrew Smit", number_of_players: 8, genre: "mixed", difficulty: 2.5)
+Piece.create(title: "The Final Boss", composer: "Andrew Smit", number_of_players: 8, genre: "mixed", difficulty: 2)
 Piece.create(title: "Festival of the New Sun", composer: "Alan Keown", number_of_players: 6, genre: "drums", difficulty: 2)
 
 # Seeding performances
-Performance.new(piece_id: 1, ensemble_id: 1, concert_id: 1)
+Performance.create(piece_id: 1, ensemble_id: 1, concert_id: 1)
 Performance.create(piece_id: 2, ensemble_id: 1, concert_id: 1)
 Performance.create(piece_id: 3, ensemble_id: 1, concert_id: 1)
 Performance.create(piece_id: 4, ensemble_id: 3, concert_id: 1)
@@ -28,5 +35,4 @@ Note.create(note: "Parts are easy, but ensemble skills are challenging!", piece_
 Concert.create(concert_description: "An Evening of Percussion", year: 2023)
 
 
-
-puts "✅ Done seeding!"
+puts "✅ DONE!"

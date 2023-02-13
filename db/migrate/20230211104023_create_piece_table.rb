@@ -6,7 +6,6 @@ class CreatePieceTable < ActiveRecord::Migration[6.1]
       t.integer :number_of_players
       t.string :genre
       t.integer :difficulty
-      t.timestamps
     end
   end
 end
