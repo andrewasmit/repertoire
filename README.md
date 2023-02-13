@@ -1,19 +1,13 @@
-# Phase 3 Project Guidelines
+# Repertoire
+## A Digital Music Library & Curriculum Planner
 
-## Learning Goals
+This web app allows band directors to house their entire music library digitally so they have the abilityt to track when pieces were performed throughout their career. By keeping notes on each piece as they program concerts, they create a log of import details that will help them program in the future.
 
-- Build a web basic API with Sinatra and Active Record to support a React
-  frontend
+## Project Details
+This project focused on **building a Sinatra API backend** that uses
+**Active Record** to access and persist data to a database
 
-## Introduction
-
-Congrats on getting through all the material for Phase 3! Now's the time to put
-it all together and build something from scratch to reinforce what you know and
-expand your horizons.
-
-The focus of this project is **building a Sinatra API backend** that uses
-**Active Record** to access and persist data in a database, which will be used
-by a separate **React frontend** that interacts with the database via the API.
+The project all utilizes a separate **React frontend** that interacts with the database via the API.
 
 ## Requirements
 
@@ -39,23 +33,11 @@ For this project, you must:
   should NOT be relying on filtering front end state or a separate fetch request to
   retrieve related data.
 
-For example, build a todo list application with a React frontend interface and a
-Sinatra backend API, where a user can:
-
-- **Create** a new todo
-- **Read** a list of all todos
-- **Update** an individual todo
-- **Delete** a todo
-
-A `Todo` can be tagged with a `Category`, so that each todo _belongs to_ a
-category and each category _has many_ todos.
-
 ## Getting Started
 
 ### Backend Setup
 
-This repository has all the starter code needed to get a Sinatra backend up and
-running. [**Fork and clone**][fork link] this repository to get started. Then, run
+[**Fork and clone**][fork link] this repository to get started. Then, run
 `bundle install` to install the gems.
 
 **Important**: Be sure you fork a copy of the repo into your GitHub account
@@ -63,10 +45,7 @@ before cloning it. You can do this by using the link above or by clicking the
 "Octocat" button at the top of this page, then clicking "Fork" in the upper
 right corner of the repo page.
 
-[fork link]: https://github.com/learn-co-curriculum/phase-3-sinatra-react-project/fork
-
-The `app/controllers/application_controller.rb` file has an example GET route
-handler. Replace this route with routes for your project.
+[fork link]: https://github.com/andrewasmit/repertoire
 
 You can start your server with:
 
@@ -77,32 +56,11 @@ $ bundle exec rake server
 This will run your server on port
 [http://localhost:9292](http://localhost:9292).
 
-### Frontend Setup
+### Frontend Repo
+The frontend repo can be found[**HERE**][fork link]. Then, run
+`npm i && npm start` to install the necessary dependencies.
 
-Your backend and your frontend should be in **two different repositories**.
-
-Create a new repository in a **separate folder** with a React app for your
-frontend. To do this, `cd` out of the backend project directory, and use
-[create-react-app][] to generate the necessary code for your React frontend:
-
-```console
-$ npx create-react-app my-app-frontend
-```
-
-After creating the project locally, you should also
-[create a repository on GitHub][create repo] to host your repo and help
-collaborate, if you're working with a partner.
-
-### Fetch Example
-
-Your React app should make fetch requests to your Sinatra backend! Here's an
-example:
-
-```js
-fetch("http://localhost:9292/test")
-  .then((r) => r.json())
-  .then((data) => console.log(data));
-```
+[fork link]: https://github.com/andrewasmit/repertoire_front
 
 ## Project Tips
 
@@ -121,14 +79,4 @@ fetch("http://localhost:9292/test")
 - Use the [Network Tab in the Dev Tools][network tab] in the frontend to debug
   your requests.
 
-## Resources
 
-- [create-react-app][]
-- [dbdiagram.io][]
-- [Postman][postman download]
-
-[create-react-app]: https://create-react-app.dev/docs/getting-started
-[create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
-[dbdiagram.io]: https://dbdiagram.io/
-[postman download]: https://www.postman.com/downloads/
-[network tab]: https://developer.chrome.com/docs/devtools/network/
