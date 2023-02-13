@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2023_02_12_034119) do
     t.integer "number_of_players"
     t.string "genre"
     t.integer "difficulty"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

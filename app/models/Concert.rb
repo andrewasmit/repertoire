@@ -17,4 +17,12 @@ class Concert < ActiveRecord::Base
         end
     end
 
+    def composers
+        @arr = self.pieces.uniq.map do |p|
+            p.composer
+        end
+        @arr.tally
+    end
+    
+# end of Class 
 end
