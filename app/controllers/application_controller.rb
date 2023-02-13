@@ -17,6 +17,11 @@ class ApplicationController < Sinatra::Base
     concerts.to_json(include: { pieces: { include: :notes } })
   end
 
+  get "/concerts/:id" do
+    concert = Concert.find(params[:id])
+    concert.to_json(include: :pieces)
+  end
+
 
 # End of ApplicationController
 end
