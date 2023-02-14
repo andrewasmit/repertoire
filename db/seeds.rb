@@ -8,14 +8,14 @@ Performance.destroy_all
 Concert.destroy_all
 
 # Seeding pieces
-Piece.create(title: "The Gilded Cage", composer: "Susan Powell", number_of_players: 4, genre: "drums", difficulty: 3)
-Piece.create(title: "Under Attack!", composer: "Matt Moore", number_of_players: 4, genre: "drums", difficulty: 4)
-Piece.create(title: "Stormbreak", composer: "Jim Casella", number_of_players: 8, genre: "mixed", difficulty: 3)
-Piece.create(title: "The Final Boss", composer: "Andrew Smit", number_of_players: 8, genre: "mixed", difficulty: 2)
-Piece.create(title: "Festival of the New Sun", composer: "Alan Keown", number_of_players: 6, genre: "drums", difficulty: 2)
-Piece.create(title: "Overture to Barber of Seville", composer: "Gioachino Rossini", arranger: "Andrew Smit", number_of_players: 10, genre: "mallets", difficulty: 4)
-Piece.create(title: "Fanfare", composer: "Jonathan Ovalle", number_of_players: 10, genre: "mixed", difficulty: 3)
-Piece.create(title: "Shared Space", composer: "Ivan Trevino", number_of_players: 7, genre: "mixed", difficulty: 3)
+Piece.create(title: "The Gilded Cage", composer: "Susan Powell", number_of_players: 4, genre: "drums", difficulty: 3, reference_recording:"https://www.youtube.com/watch?v=Q0XJ-TNO66c")
+Piece.create(title: "Under Attack!", composer: "Matt Moore", number_of_players: 4, genre: "drums", difficulty: 4, reference_recording:"https://www.youtube.com/watch?v=UiKHBb745JY")
+Piece.create(title: "Stormbreak", composer: "Jim Casella", number_of_players: 8, genre: "mixed", difficulty: 3, reference_recording:"https://www.youtube.com/watch?v=d1BGRafixgc")
+Piece.create(title: "The Final Boss", composer: "Andrew Smit", number_of_players: 8, genre: "mixed", difficulty: 2, reference_recording:"https://soundcloud.com/tapspacepublications/the-final-boss-andrew-smit")
+Piece.create(title: "Festival of the New Sun", composer: "Alan Keown", number_of_players: 6, genre: "drums", difficulty: 2, reference_recording:"https://soundcloud.com/tapspacepublications/festival-of-the-new-sun-alan")
+Piece.create(title: "Overture to Barber of Seville", composer: "Gioachino Rossini", arranger: "Andrew Smit", number_of_players: 10, genre: "mallets", difficulty: 4, reference_recording:"https://www.youtube.com/watch?v=b7MHZ4at4Ds")
+Piece.create(title: "Fanfare", composer: "Jonathan Ovalle", number_of_players: 10, genre: "mixed", difficulty: 3, reference_recording:"https://www.youtube.com/watch?v=e5MpVhP4K9w")
+Piece.create(title: "Shared Space", composer: "Ivan Trevino", number_of_players: 7, genre: "mixed", difficulty: 3, reference_recording:"https://www.youtube.com/watch?v=RGftfCpkb-A")
 
 # Seeding performances
 Performance.create(piece_id: 1, ensemble_id: 1, concert_id: 1)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_02_13_202537) do
+ActiveRecord::Schema.define(version: 2023_02_14_192212) do
 
   create_table "concerts", force: :cascade do |t|
     t.string "concert_description"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2023_02_13_202537) do
     t.string "genre"
     t.integer "difficulty"
     t.string "arranger"
+    t.string "reference_recording"
   end
 
 end
