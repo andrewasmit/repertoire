@@ -1,3 +1,4 @@
+require 'pry'
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
@@ -14,15 +15,17 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/library" do
+    note = Note.create(note: params[:notes])
     new_piece = Piece.create(
       title: params[:title],
-      composer: params[:composer],
+      composer: params[:composer], 
       number_of_players: params[:number_of_players],
       genre: params[:genre],
       difficulty: params[:difficulty],
       arranger: params[:arranger],
       reference_recording: params[:reference_recording],
     )
+    new_piece.connect_note_to_piece
     new_piece.to_json
   end
 

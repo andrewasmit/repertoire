@@ -18,4 +18,10 @@ class Piece < ActiveRecord::Base
         end
     end
 
+    def connect_note_to_piece
+        note = Note.last
+        note.piece_id = self.id
+        note
+    end
+
 end
