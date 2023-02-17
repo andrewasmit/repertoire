@@ -21,7 +21,9 @@ class Piece < ActiveRecord::Base
     def connect_note_to_piece
         note = Note.last
         note.piece_id = self.id
-        note.save
+        if note.note != nil then
+            note.save
+        end
         note
     end
 
