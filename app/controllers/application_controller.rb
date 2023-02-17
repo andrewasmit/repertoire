@@ -7,11 +7,6 @@ class ApplicationController < Sinatra::Base
     pieces.to_json(include: :notes)
   end
 
-  get "/library/:id" do
-    piece = Piece.find(params[:id])
-    piece.to_json(include: :notes)
-  end
-
   delete "/library/:id" do
     piece = Piece.find(params[:id])
     piece.destroy 
