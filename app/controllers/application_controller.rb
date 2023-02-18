@@ -43,6 +43,14 @@ class ApplicationController < Sinatra::Base
     piece.to_json
   end
 
+  post "/library/:id" do
+    note = Note.create(
+      note: params[:note],
+      piece_id: params[:id]
+      )
+    note.to_json
+  end
+
 
   # CRUD for Concerts
   get "/concerts" do
