@@ -52,6 +52,13 @@ class ApplicationController < Sinatra::Base
       updated_piece.to_json(include: :notes)
   end
 
+  delete "/library/notes/:id" do 
+    note = Note.find(params[:id])
+    associated_piece = Piece.find(note.piece_id)
+    note.destroy
+    associated_piece.to_json(include: :notes)
+  end
+
 
   # CRUD for Concerts
   get "/concerts" do
