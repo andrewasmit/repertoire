@@ -40,7 +40,7 @@ class ApplicationController < Sinatra::Base
       genre: params[:genre],
       difficulty: params[:difficulty]
     )
-    piece.to_json
+    piece.to_json(include: :notes)
   end
 
   post "/library/:id" do
