@@ -44,6 +44,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/library/:id" do
+    # binding.pry
     note = Note.create(
       note: params[:note],
       piece_id: params[:id]
