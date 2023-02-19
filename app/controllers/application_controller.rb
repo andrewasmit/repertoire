@@ -44,12 +44,12 @@ class ApplicationController < Sinatra::Base
   end
 
   post "/library/:id" do
-    # binding.pry
+    updated_piece = Piece.find(params[:id])
     note = Note.create(
       note: params[:note],
       piece_id: params[:id]
       )
-    note.to_json
+      updated_piece.to_json(include: :notes)
   end
 
 
