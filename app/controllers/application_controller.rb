@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
       reference_recording: params[:reference_recording],
     )
     new_piece.connect_note_to_piece
-    new_piece.to_json
+    new_piece.to_json(include: :notes)
   end
 
   patch "/library/:id" do
