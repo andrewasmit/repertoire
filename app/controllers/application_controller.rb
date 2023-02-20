@@ -2,7 +2,7 @@ require 'pry'
 class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
-  #CRUD for Pieces
+  #  ******** CRUD for Pieces ******** 
   get "/library" do
     pieces = Piece.all
     pieces.to_json(include: :notes)
@@ -63,7 +63,8 @@ class ApplicationController < Sinatra::Base
   end
 
 
-  # CRUD for Concerts
+  #  ******** CRUD for Concerts ******** 
+
   get "/concerts" do
     concerts = Concert.all
     concerts.to_json(include: [:performances, :ensembles])
