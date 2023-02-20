@@ -30,6 +30,8 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/library/:id" do
+    # binding.pry
+    note = Note.create(note: params[:notes])
     piece = Piece.find(params[:id])
     piece.update(
       reference_recording: params[:reference_recording],
@@ -40,6 +42,7 @@ class ApplicationController < Sinatra::Base
       genre: params[:genre],
       difficulty: params[:difficulty]
     )
+    piece.connect_note_to_piece
     piece.to_json(include: :notes)
   end
 
