@@ -20,11 +20,11 @@ Piece.create(title: "Shared Space", composer: "Ivan Trevino", number_of_players:
 # Seeding performances
 Performance.create(piece_id: 1, ensemble_id: 1, concert_id: 1)
 Performance.create(piece_id: 2, ensemble_id: 1, concert_id: 1)
-Performance.create(piece_id: 3, ensemble_id: 1, concert_id: 1)
+Performance.create(piece_id: 3, ensemble_id: 2, concert_id: 1)
 Performance.create(piece_id: 4, ensemble_id: 3, concert_id: 1)
 Performance.create(piece_id: 5, ensemble_id: 2, concert_id: 1)
 Performance.create(piece_id: 6, ensemble_id: 1, concert_id: 2)
-Performance.create(piece_id: 7, ensemble_id: 2, concert_id: 2)
+Performance.create(piece_id: 7, ensemble_id: 1, concert_id: 2)
 Performance.create(piece_id: 8, ensemble_id: 1, concert_id: 2)
 
 # Seeding Ensembles
