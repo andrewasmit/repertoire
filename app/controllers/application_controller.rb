@@ -87,11 +87,16 @@ class ApplicationController < Sinatra::Base
 
   patch "/concerts/:id" do
     concert = Concert.find(params[:id])
-    concert.update(
-      concert_description: params[:concert_description],
-      year: params[:year]
+    performance = Performance.create(
+      concert_id: params[:concert],
+      piece_id: Piece.find_by(title: params[:performance]).id,
+      ensemble_id: Ensemble.find_by(name: params[:ensemble]).id
     )
-    concert.to_json
+    concert.to_json(include: [:performances, :ensembles])
+  end
+
+  get "/ensembles" do
+    Ensemble.all.to_json
   end
 
 
