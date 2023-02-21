@@ -71,9 +71,10 @@ class ApplicationController < Sinatra::Base
   end
 
   delete "/concerts/:id" do
-    concert = Concert.find(params[:id])
-    concert.destroy
-    concert.to_json
+    concert = Concert.find(Performance.find(params[:id]).concert_id)
+    performance = Performance.find(params[:id])
+    performance.destroy
+    concert.to_json(include: [:performances, :ensembles])
   end
 
   post "/concerts" do
