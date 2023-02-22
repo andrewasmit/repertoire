@@ -109,6 +109,14 @@ class ApplicationController < Sinatra::Base
     Ensemble.all.to_json
   end
 
+  post "/ensembles" do
+    ens = Ensemble.create(
+      name: params[:name],
+      grade_level: params[:grade_level]
+    )
+    ens.to_json
+  end
+
 
   
 # End of ApplicationController
