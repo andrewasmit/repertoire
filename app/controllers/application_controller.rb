@@ -30,7 +30,6 @@ class ApplicationController < Sinatra::Base
   end
 
   patch "/library/:id" do
-    # binding.pry
     note = Note.create(note: params[:notes])
     piece = Piece.find(params[:id])
     piece.update(
@@ -93,7 +92,7 @@ class ApplicationController < Sinatra::Base
       concert_description: params[:concert_description],
       year: params[:year]
     )
-    new_concert.to_json
+    Concert.all.to_json(include: [:performances, :ensembles])
   end
 
   patch "/concerts/performance/:id" do
@@ -116,6 +115,7 @@ class ApplicationController < Sinatra::Base
   end
 
 
+  #  ******** CRUD for Ensembles ******** 
   get "/ensembles" do
     Ensemble.all.to_json
   end
