@@ -71,6 +71,17 @@ class ApplicationController < Sinatra::Base
   end
 
   delete "/concerts/:id" do
+    target_id = Concert.find(params[:id]).id
+    Performance.all.each do |p|
+      if p.concert_id == target_id then
+        p.destroy
+      end
+    end
+    Concert.find(params[:id]).destroy
+    Concert.all.to_json(include: [:performances, :ensembles])
+  end
+
+  delete "/concerts/performances/:id" do
     concert = Concert.find(Performance.find(params[:id]).concert_id)
     performance = Performance.find(params[:id])
     performance.destroy
