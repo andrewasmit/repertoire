@@ -16,6 +16,8 @@ Piece.create(title: "Festival of the New Sun", composer: "Alan Keown", number_of
 Piece.create(title: "Overture to Barber of Seville", composer: "Gioachino Rossini", arranger: "Andrew Smit", number_of_players: 10, genre: "Mallets", difficulty: 4, reference_recording:"https://www.youtube.com/watch?v=b7MHZ4at4Ds")
 Piece.create(title: "Fanfare", composer: "Jonathan Ovalle", number_of_players: 10, genre: "Mixed", difficulty: 3, reference_recording:"https://www.youtube.com/watch?v=e5MpVhP4K9w")
 Piece.create(title: "Shared Space", composer: "Ivan Trevino", number_of_players: 7, genre: "Mixed", difficulty: 3, reference_recording:"https://www.youtube.com/watch?v=RGftfCpkb-A")
+Piece.create(title: "Pad Jam", composer: "Traditional", number_of_players: 1, genre: "Drums", difficulty: 1)
+Piece.create(title: "Boom Bap", composer: "Nick Werth", number_of_players: 6, genre: "Drums", difficulty: 5, reference_recording:"https://www.youtube.com/watch?v=JA1mrswD4Wk")
 
 # Seeding performances
 Performance.create(piece_id: 1, ensemble_id: 1, concert_id: 1)
